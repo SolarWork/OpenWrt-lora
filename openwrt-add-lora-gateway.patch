@@ -24,7 +24,7 @@ index 0000000..53236b1
 +PKG_RELEASE:=1
 +
 +PKG_SOURCE_PROTO:=git
-+PKG_SOURCE_URL:=git@github.com:mirakonta/lora_gateway.git
++PKG_SOURCE_URL:=https://github.com/mirakonta/lora_gateway.git
 +PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 +PKG_SOURCE_VERSION:=a01a504e004bbe2e6a18c169fb9e2de2f617cb94
 +PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
@@ -64,7 +64,7 @@ index 0000000..53236b1
 +	$(INSTALL_DIR) $(1)/root/lora
 +	$(INSTALL_BIN) $(PKG_BUILD_DIR)/libloragw/test* $(1)/root/lora
 +	$(INSTALL_BIN) $(PKG_BUILD_DIR)/util_pkt_logger/util_pkt_logger $(1)/root/lora
-+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/util_band_survey/util_band_survey $(1)/root/lora
++	$(INSTALL_BIN) $(PKG_BUILD_DIR)/util_tx_continuous/util_tx_continuous $(1)/root/lora
 +	$(INSTALL_BIN) $(PKG_BUILD_DIR)/util_spi_stress/util_spi_stress $(1)/root/lora
 +	$(INSTALL_BIN) $(PKG_BUILD_DIR)/util_tx_test/util_tx_test $(1)/root/lora
 +endef
